@@ -1,10 +1,11 @@
 export function Seccion1(){
     return(
         <div>
-           <div>
+           <div className="">
             <h2 className=" 
             flex
             flex-row
+            text-center
             text-3xl
             lexend 
             font-bold
