@@ -1,5 +1,9 @@
+import Seccion1 from "../components/seccion1"
 export default function Home() {
   return (
-    <h1 className="text-2xl text-green-500">feliz cumple gen</h1>
+    <div>
+      <Seccion1/>
+    </div>
+    
   )
 }
