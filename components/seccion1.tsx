@@ -1,27 +1,25 @@
 export function Seccion1(){
     return(
-        <div>
-           <div className="bg-primary font-Lexend">
+        <div className="bg-primary font-Lexend px-[30px] pt-12">
+           <div className="">
             <h2 className=" 
-            container
-            mx-auto
+            w-[780px]
+            p-3
             text-center
-            lg:pl-38
-            lg:pt-56
-            sm:pt-7
             lg:text-3xl
             sm:text-2xl
             font-bold
-            ">¡Aprender Lenguaje de Señas Mexicanas nunca ha sido tan sencillo y divertido!</h2>
+            ">¡Aprender Lenguaje de Señas Mexicanas nunca ha sido tan sencillo y divertido!
+            </h2>
             <h1 className="
-            container
-            mx-auto
+            w-[600px]
+            p-3
             text-center
+            justify-center
             flex
             flex-row
             lg:text-2xl
             sm:text-xl
-            lg:pl-auto
             font-semibold
             text-gray-400
             ">Empezar a jugar no toma más de 2 minutos, ¡Regístrate!</h1>
@@ -30,9 +28,11 @@ export function Seccion1(){
             hover:bg-hoversecondary
             text-gray-50
             font-semibold 
+            m-3
             py-2 
             px-4 
             rounded shadow
+            justify-items-center
             ">¡Empieza Ya!</button>
            </div>
         </div>
