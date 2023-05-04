@@ -9,6 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: theme =>({
+        'primary': '#C0EEE4',
+        'secondary':'#F9989F',
+        'hoversecondary': '#FFBEC3'
+      }),
       fontFamily: {
         Lexend: ['Lexend', "sans-serif"],
       },
