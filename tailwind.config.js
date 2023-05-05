@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      padding:{
+        '18': '4.3rem',
+      },
       backgroundColor: theme =>({
         'primary': '#C0EEE4',
         'secondary':'#F9989F',
