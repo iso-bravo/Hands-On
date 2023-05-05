@@ -1,16 +1,16 @@
 export function Seccion1() {
   return (
-    <div className="bg-primary font-Lexend px-16 pt-12 flex flex-col">
-      <div className="flex flex-col">
+    <div className=" relative h-full w-full bg-primary font-Lexend px-16 pt-12 flex flex-col">
+      <div className=" w-full h-full flex flex-col">
         <h2
           className="
-            w-[750px]
+            w-[850px]
             m-auto
             p-3
             text-center
-            lg:text-3xl
+            lg:text-4xl
             sm:text-2xl
-            font-bold
+            font-bold 
             "
         >
           ¡Aprender Lenguaje de Señas Mexicanas nunca ha sido tan sencillo y
@@ -18,12 +18,12 @@ export function Seccion1() {
         </h2>
         <h1
           className="
-            w-[400px]
+            w-[500px]
             m-auto
             p-3
             text-center
             justify-center
-            lg:text-2xl
+            lg:text-3xl
             sm:text-xl
             font-semibold
             text-gray-400
