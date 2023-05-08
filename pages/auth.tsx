@@ -1,11 +1,30 @@
 import { useCallback, useState } from "react";
 import { FcGoogle } from 'react-icons/fc';
+import axios from "axios";
 
 const Auth = () => {
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+    const [lastName, setLastName] = useState('');
+
     const [variant, setVariant] = useState('login');
     const toggleVariant = useCallback(() => {
         setVariant((currentVariant) => currentVariant === 'login' ? 'register' : 'login');
     }, []);
+
+    const register = useCallback(async () => {
+        try {
+            await axios.post('/api/register', {
+                email,
+                name,
+                password,
+                lastName,
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }, [email, name, password, lastName]);
 
     return(
         <div className="absolute bg-[#F5F5F5] rounded-3xl w-[500px] h-[570px] 
@@ -19,22 +38,40 @@ const Auth = () => {
                         <input type="text" className="font-Lexend px-4 py-2 h-14
                         bg-white placeholder-[#8A8A8A] focus:outline-none block w-1/2
                             rounded-2xl text-lg focus:ring-1" placeholder="Nombre"
+
+                            onChange={(ev) => setName(ev.target.value)}
+                            id="name"
+                            value={name}
                         />
                         <input type="text" className="font-Lexend px-4 py-2
                             bg-white placeholder-[#8A8A8A] focus:outline-none block w-1/2 
                             rounded-2xl sm:text-lg focus:ring-1" placeholder="Apellido"
+
+                            onChange={(ev) => setLastName(ev.target.value)}
+                            id="lastName"
+                            value={lastName}
                         />
                     </div>
                 )}
-                <input type="text" className="font-Lexend px-4 py-2 h-14 w-full
+                <input className="font-Lexend px-4 py-2 h-14 w-full
                     bg-white placeholder-[#8A8A8A] focus:outline-none block 
                     rounded-2xl text-lg focus:ring-1" placeholder="Correo"
+
+                    onChange={(ev) => setEmail(ev.target.value)}
+                    id="email"
+                    type="email"
+                    value={email}
                 />
-                <input type="text" className="font-Lexend px-4 py-2 h-14 w-full
+                <input className="font-Lexend px-4 py-2 h-14 w-full
                     bg-white placeholder-[#8A8A8A] focus:outline-none block 
                     rounded-2xl text-lg focus:ring-1" placeholder="Contraseña"
+
+                    onChange={(ev) => setPassword(ev.target.value)}
+                    id="password"
+                    type="password"
+                    value={password}
                 />
-                <button className="bg-[#C0EEE4] font-Lexend rounded-2xl h-14
+                <button onClick={register} className="bg-[#C0EEE4] font-Lexend rounded-2xl h-14
                     text-2xl hover:bg-[#C9F1E8]">
                         {variant === 'login' ?  'Registrar' : 'Iniciar Sesión'}
                 </button>
@@ -45,10 +82,10 @@ const Auth = () => {
                         <FcGoogle size={50}/>
                 </button>
                 <p className="justify-center">
-                {variant === 'login' ?  'Ya tienes cuenta?' : 'No tienes cuenta?'}
+                {variant === 'login' ?  'Ya tienes cuenta? ' : 'No tienes cuenta? '}
                 <span onClick={toggleVariant} className="text-[#4171CF] 
                     hover:underline cursor-pointer">
-                        {variant === 'login' ?  ' Inicia Sesión' : ' Regístrate'}
+                        {variant === 'login' ?  'Inicia Sesión' : 'Regístrate'}
                 </span>
                 </p>
             </div>

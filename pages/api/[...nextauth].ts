@@ -1,6 +1,7 @@
 import NextAuth from "next-auth/next";
 import Credentials from "next-auth/providers/credentials";
 import client from "../../lib/prismadb";
+import { compare } from "bcrypt";
 
 export default NextAuth({
     providers: [
@@ -19,30 +20,44 @@ export default NextAuth({
             },
             async authorize(credentials){
                 if(!credentials?.email || !credentials?.password){
-                    throw new Error('Email y contrasena necessarios');
+                    throw new Error('Email y contrasena necesarios');
                 }
                 
-                const user = await client.usuario.findUnique({
+                const user = await client.user.findUnique({
                     where: {
-                        correo: credentials.email
+                        email: credentials.email
                     }
                 });
 
-                if(!user || !user.contrasena){
+                if(!user || !user.hashedPassword){
                     throw new Error('Email no existe');
                 }
 
-                    // const isCorrectPassword = await compare(
-                    //     credentials?.password,
-                    //     user.contrasena
-                    // );
+                const isCorrectPassword = await compare(
+                    credentials.password,
+                    user.hashedPassword
+                );
 
-                    // if(!isCorrectPassword) {
-                    //     throw new Error('Incorrect password');
-                    // }
+                if(!isCorrectPassword) {
+                    throw new Error('Contrasena Incorrecta');
+                }
 
-                    return {id: `${user.id}`, email: user.correo, name: user.nombre + " " + user.apellido_paterno}
+                return {id: `${user.id}`, email: user.email, name: user.name + " " + user.lastName}
+                    //return user
             }
         })
-    ]
-})
+    ],
+
+    pages: {
+        signIn: '/auth',
+    },
+
+    debug: process.env.NODE_ENV ==='development',
+    session: {
+        strategy: 'jwt',
+    },
+    jwt: {
+        secret: process.env.NEXTAUTH_JWT_SECRET,
+    },
+    secret: process.env.NEXTAUTH_SECRET,
+});
