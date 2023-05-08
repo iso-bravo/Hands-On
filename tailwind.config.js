@@ -15,7 +15,9 @@ module.exports = {
       backgroundColor: theme =>({
         'primary': '#C0EEE4',
         'secondary':'#F9989F',
-        'hoversecondary': '#FFBEC3'
+        'hoversecondary': '#FFBEC3',
+        'seccion3fondo' : '#EDF9F6',
+        'footer' : '#292D32'
       }),
       fontFamily: {
         Lexend: ['Lexend', "sans-serif"],

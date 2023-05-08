@@ -36,6 +36,8 @@ export function Seccion1() {
             className=" 
             bg-secondary
             hover:bg-hoversecondary
+            transition-all
+            duration-200
             text-gray-50
             font-semibold 
             m-3
