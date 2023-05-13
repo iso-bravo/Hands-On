@@ -1,7 +1,7 @@
 export function Seccion1() {
   return (
     <div className=" relative h-full w-full bg-primary font-Lexend px-16 pt-12 flex flex-col">
-      <div className=" w-full h-full flex flex-col ">
+      <div className=" w-full h-full flex flex-col">
         <h2
           className="
             w-[850px]
