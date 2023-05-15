@@ -35,21 +35,21 @@ const Navbar = () => {
                     transition
                     duration-500
                     
-                    ${showBackground ? "bg-primary opacity-0 hover:opacity-90 " : ""}
+                    ${showBackground ? "bg-primary opacity-0 hover:opacity-95 " : ""}
                 `}
       >
-        <p className="h-4 lg: h-7 text-black font-bold text-4xl mb-2">
+        <p className="h-4 lg: h-7 text-black font-bold text-4xl mb-2 px-20">
           HandsOn
         </p>
         <div
           className="
                         flex-row
                         justify-around
-                        ml-8
                         items-center
-                        gap-7
                         hidden
                         lg:flex
+                        w-6/12
+                        mx-20
                     "
         >
           <NavbarItem label="Inicio" />
@@ -57,8 +57,8 @@ const Navbar = () => {
           <NavbarItem label="Soporte" />
           <NavbarItem label="Equipo" />
         </div>
-
-        <div className="flex flex-row ml-auto gap-7 items-center text-black cursor-pointer hover:text-gray-500 transition font-bold">
+<div className="flex flex-row mx-auto gap-4 items-center px-2">
+        <div className="flex items-center text-black cursor-pointer hover:text-gray-500 transition font-bold">
             Iniciar Sesión
             
         </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
             font-semibold 
             m-3
             py-3
-            px-5
+            px-8
             rounded-lg 
             shadow
             justify-center
@@ -81,6 +81,7 @@ const Navbar = () => {
           >
             Registro
           </button>
+          </div>
       </div>
     </nav>
   );

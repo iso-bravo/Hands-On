@@ -1,7 +1,7 @@
 export function Seccion1() {
   return (
     <div className=" relative h-full w-full bg-primary font-Lexend px-16 pt-12 flex flex-col">
-      <div className=" w-full h-full flex flex-col">
+      <div className=" w-full h-full flex flex-col mt-20">
         <h2
           className="
             w-[850px]
@@ -10,7 +10,8 @@ export function Seccion1() {
             text-center
             lg:text-4xl
             sm:text-2xl
-            font-bold 
+            font-bold
+            animate-fade-in-down 
             "
         >
           ¡Aprender Lenguaje de Señas Mexicanas nunca ha sido tan sencillo y
@@ -27,6 +28,7 @@ export function Seccion1() {
             sm:text-xl
             font-semibold
             text-gray-400
+            animate-fade-in-down
             "
         >
           Empezar a jugar no toma más de 2 minutos, ¡Regístrate!
@@ -46,12 +48,13 @@ export function Seccion1() {
             shadow
             justify-center
             item-center
+            animate-fade-in-down
             "
           >
             ¡Empieza Ya!
           </button>
         </div>
-          <div className='flex flex-col'>
+          <div className='flex flex-col animate-fade-in-down'>
             <img className="object-contain h-96 w-50" src="/images/mi.png" alt="mi" />
         </div>
       </div>
