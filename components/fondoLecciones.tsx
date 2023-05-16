@@ -9,7 +9,7 @@ export function FondoLecciones() {
         <div className="flex flex-col">
           <div>azul</div>
           <div>Rosa</div>
-          <div>Amarillo</div>
+          <div className="bg-amarillo">Amarillo</div>
         </div>
       </div>
     </div>
