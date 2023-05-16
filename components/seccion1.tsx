@@ -38,7 +38,7 @@ export function Seccion1() {
             lg:text-3xl
             sm:text-xl
             font-semibold
-            text-gray-400
+            text-gray-100
             animate-fade-in-down
             "
         >
