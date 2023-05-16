@@ -33,7 +33,7 @@ module.exports = {
         'hoversecondary': '#FFBEC3',
         'seccion3fondo' : '#FF78B2',
         'footer' : '#292D32',
-        'amarillo': 'FFF97A'
+        'amarillo': '#FFF41A'
       }),
       fontFamily: {
         Lexend: ['Lexend', "sans-serif"],

@@ -55,42 +55,42 @@ export function Sidebar() {
         //     })
         // }
 
+        {/* // <button className=" flex flex-row text-left text-3xl hover:bg-[#F5F5F5] rounded-3xl p-6 px-6 gap-1 mt-2 align-middle">
+                            //     {menu.label}
+                            // </button> */}
+                        
+        {/* /{menuItems.map(({ icon: Icon, ...menu}) => {
+                    //const classes = getNavItemClasses(menu); */}
+
+        // onClick={handleClick}
+        // style={ backgroundColor: active ? "green" : "white" }
+
     return(
         <div className="w-1/5 h-full p-6 mx-2 font-Lexend font-bold flex flex-col gap-0">
             <h1 className="font-bold text-6xl flex justify-center">
                 HandsOn
             </h1>
-            <img className="flex object-center rounded-full w-[60%] ml-20 mt-3 mb-2" src="/images/ppuser.jpg"></img>
+            <img className="flex object-center rounded-full w-[60%] ml-20 mt-5 mb-4" src="/images/ppuser.jpg"></img>
             <h2 className="flex justify-center text-3xl">Iso</h2>
-            <div className="flex flex-col justify-center text-lg">
-                {menuItems.map(({ icon: Icon, ...menu}) => {
-                    //const classes = getNavItemClasses(menu);
-
-                    return (
-                            <button className=" flex flex-row text-left text-3xl hover:bg-[#F5F5F5] rounded-3xl p-6 px-6 gap-1 mt-2 align-middle">
-                                {menu.label}
-                            </button>
-                    )
-                })}
-                {/* <button id="lecciones" className="h-18 flex flex-row text-left hover:bg-[#F5F5F5] rounded-3xl p-4 px-6 gap-1 mt-2"
-                    onClick={handleClick}
-                    style={{ backgroundColor: active ? "green" : "white" }}>
-                <BiBookBookmark size={27}/>
+            <div className="flex flex-col justify-center text-4xl">
+                <button id="lecciones" className="h-24 flex flex-row text-left hover:bg-[#F5F5F5] rounded-3xl p-6 px-20 gap-1 mt-2"
+                onClick={Lecciones}>
+                <BiBookBookmark size={45}/>
                     Lecciones
                 </button>
-                <button className="h-18 flex flex-row text-left hover:bg-[#F5F5F5] rounded-3xl p-4 px-6 gap-1"
+                <button className="h-24 flex flex-row text-left hover:bg-[#F5F5F5] rounded-3xl p-6 px-20 gap-1"
                     onClick={Perfil}>
-                    <CgProfile size={27}/> 
+                    <CgProfile size={45}/> 
                     Perfil
                 </button>
-                <button className="h-18 flex flex-row text-left hover:bg-[#F5F5F5] rounded-3xl p-4 px-6 gap-1"
-                    onClick={Lecciones}>
-                    <FiSettings size={27}/>
+                <button className="h-24 flex flex-row text-left hover:bg-[#F5F5F5] rounded-3xl p-6 px-20 gap-1"
+                    onClick={Ajustes}>
+                    <FiSettings size={45}/>
                     Ajustes
-                </button> */}
-                <div className="flex flex-row justify-center mt-96 pt-48 gap-1" onClick={() => signOut({redirect: true, callbackUrl: '/auth'})}>
-                    <HiOutlineLogout size={35} className="cursor-pointer rotate-180"/>
-                    <p className="cursor-pointer text-2xl">Cerrar Sesión</p>
+                </button> 
+                <div className="flex flex-row justify-center mt-80 pt-48 gap-1" onClick={() => signOut({redirect: true, callbackUrl: '/auth'})}>
+                    <HiOutlineLogout size={40} className="cursor-pointer rotate-180"/>
+                    <p className="cursor-pointer text-3xl">Cerrar Sesión</p>
                 </div>
             </div>
         </div>

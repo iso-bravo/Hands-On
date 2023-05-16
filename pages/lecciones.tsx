@@ -17,7 +17,7 @@ export default function Lecciones(){
 
     console.log(usuario)
     return (
-        <div className="flex flex-row py-6 h-1/2 w-full">
+        <div className="flex flex-row py-6 h-screen w-full">
             <Sidebar/>
             <FondoLecciones/>
         </div>
