@@ -28,10 +28,10 @@ module.exports = {
         '18': '4.3rem',
       },
       backgroundColor: theme =>({
-        'primary': '#C0EEE4',
+        'primary': '#89DAEC',
         'secondary':'#F9989F',
         'hoversecondary': '#FFBEC3',
-        'seccion3fondo' : '#EDF9F6',
+        'seccion3fondo' : '#FF78B2',
         'footer' : '#292D32'
       }),
       fontFamily: {

@@ -19,7 +19,7 @@ export function Seccion2() {
           <div>
             <div className=" flex flex-row justify-center items-center">
               <div className="bg-gray-400 rotate-45 rounded-3xl p-18 opacity-30 scale-125"></div>
-              <div className="absolute bg-primary rounded-3xl hover:scale-125 transition-all duration-400">
+              <div className="absolute bg-[#FFF97A] rounded-3xl hover:scale-125 transition-all duration-400">
                 <IoChatbubblesOutline className="h-36 w-36 m-4" />
               </div>
             </div>

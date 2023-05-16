@@ -1,4 +1,15 @@
+import router from "next/router";
+import { useCallback } from "react";
+
 export function Seccion1() {
+  
+  const Lecciones = useCallback(async () => {
+    try {
+        router.replace('/lecciones');
+    } catch (error) {
+        console.log(error);
+    }}, []);
+
   return (
     <div className=" relative h-full w-full bg-primary font-Lexend px-16 pt-12 flex flex-col">
       <div className=" w-full h-full flex flex-col mt-20">
@@ -36,8 +47,8 @@ export function Seccion1() {
         <div className="flex justify-center items-center">
           <button
             className=" 
-            bg-secondary
-            hover:bg-hoversecondary
+            bg-[#FD4E99]
+            hover:bg-[#f976af]
             transition-all
             duration-200
             text-gray-50
@@ -50,6 +61,8 @@ export function Seccion1() {
             item-center
             animate-fade-in-down
             "
+
+            onClick={Lecciones}
           >
             ¡Empieza Ya!
           </button>

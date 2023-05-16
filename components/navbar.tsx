@@ -64,8 +64,8 @@ const Navbar = () => {
         </div>
         <button
             className=" 
-            bg-secondary
-            hover:bg-hoversecondary
+            bg-[#FD4E99]
+            hover:bg-[#f976af]
             transition-all
             duration-200
             text-gray-50
