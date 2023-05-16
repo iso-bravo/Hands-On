@@ -49,11 +49,11 @@ export function Sidebar() {
 
         const activeMenu = useMemo(() => menuItems.find(menu => menu.link === router.pathname), [router.pathname])
 
-        const getNavItemClasses = (menu) => {
-            return classNames("flex items-center cursor-pointer hover:bg-[#d71414]", {
-                ["bg-[#f71414]"]: activeMenu.id === menu.id
-            })
-        }
+        // const getNavItemClasses = (menu) => {
+        //     return classNames("flex items-center cursor-pointer hover:bg-[#d71414]", {
+        //         ["bg-[#f71414]"]: activeMenu.id === menu.id
+        //     })
+        // }
 
     return(
         <div className="w-1/5 h-full p-6 mx-2 font-Lexend font-bold flex flex-col gap-0">
@@ -64,20 +64,12 @@ export function Sidebar() {
             <h2 className="flex justify-center text-3xl">Iso</h2>
             <div className="flex flex-col justify-center text-lg">
                 {menuItems.map(({ icon: Icon, ...menu}) => {
-                    const classes = getNavItemClasses(menu);
+                    //const classes = getNavItemClasses(menu);
 
                     return (
-                        <div className={classes}>
-                            <link href={menu.link}>   
-                                <button className=" flex flex-row text-left text-3xl hover:bg-[#F5F5F5] rounded-3xl p-6 px-6 gap-1 mt-2 align-middle">
-                                    {menu.label}
-                                </button>
-                            </link>
-                        </div>
-
-                        // <button className=" flex flex-row text-left text-3xl hover:bg-[#F5F5F5] rounded-3xl p-6 px-6 gap-1 mt-2 align-middle">
-                        //     {menu.label}
-                        // </button>
+                            <button className=" flex flex-row text-left text-3xl hover:bg-[#F5F5F5] rounded-3xl p-6 px-6 gap-1 mt-2 align-middle">
+                                {menu.label}
+                            </button>
                     )
                 })}
                 {/* <button id="lecciones" className="h-18 flex flex-row text-left hover:bg-[#F5F5F5] rounded-3xl p-4 px-6 gap-1 mt-2"
