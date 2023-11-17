@@ -11,11 +11,11 @@ export function Seccion1() {
     }}, []);
 
   return (
-    <div className=" relative h-full w-full bg-primary font-Lexend px-16 pt-12 flex flex-col">
-      <div className=" w-full h-full flex flex-col mt-20">
+    <div className="relative h-full w-full bg-primary font-Lexend px-4 sm:px-8 md:px-16 pt-12 flex flex-col">
+      <div className="w-full h-full flex flex-col mt-20">
         <h2
           className="
-            w-[850px]
+            w-full
             m-auto
             p-3
             text-center
@@ -30,7 +30,7 @@ export function Seccion1() {
         </h2>
         <h1
           className="
-            w-[500px]
+            w-full
             m-auto
             p-3
             text-center
@@ -68,7 +68,7 @@ export function Seccion1() {
           </button>
         </div>
           <div className='flex flex-col animate-fade-in-down'>
-            <img className="object-contain h-96 w-50" src="/images/mi.png" alt="mi" />
+            <img className="object-contain h-96 w-full sm:w-1/2 md:w-1/3 lg:w-1/2 xl:w-1/3 2xl:w-1/4 mx-auto" src="/images/mi.png" alt="mi" />
         </div>
       </div>
     </div>
